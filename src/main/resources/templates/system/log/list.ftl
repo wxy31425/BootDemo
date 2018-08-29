@@ -48,7 +48,7 @@
                         </div>
                         <button class="btn btn-primary cross" onclick="reLoad()">查询</button>
                         	<@shiro.hasPermission name="system:log:deleteBatch">
-                        		<button class="btn btn-danger col-md-offset-5" type="button" onclick="deleteBatch();"><i class="fa fa-remove"></i>&nbsp;批量删除</button>
+                        		<button class="btn btn-danger col-md-offset-4" type="button" onclick="deleteBatch();"><i class="fa fa-remove"></i>&nbsp;批量删除</button>
                             </@shiro.hasPermission>
 
                     </div>
