@@ -18,6 +18,7 @@ import org.springframework.data.domain.PageRequest;
 public interface IResourceService extends IBaseService<Resource, Integer> {
 	/**
 	 * 获取角色的权限树
+	 *
 	 * @param roleId
 	 * @return
 	 */
@@ -25,12 +26,14 @@ public interface IResourceService extends IBaseService<Resource, Integer> {
 
 	/**
 	 * 修改或者新增资源
+	 *
 	 * @param resource
 	 */
 	void saveOrUpdate(Resource resource);
 
 	/**
 	 * 关键字分页
+	 *
 	 * @param searchText
 	 * @param pageRequest
 	 * @return
@@ -47,10 +50,4 @@ public interface IResourceService extends IBaseService<Resource, Integer> {
 	 */
 	int getCountByName(String name);
 
-	/**
-	 * 菜单权限检查
-	 * @param permission
-	 * @return
-	 */
-	int getCountByPermission(String permission);
 }

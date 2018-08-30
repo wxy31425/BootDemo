@@ -130,11 +130,6 @@ public class ResourceServiceImpl extends BaseServiceImpl<Resource, Integer> impl
 		return count;
 	}
 
-	@Override
-	public int getCountByPermission(String permission) {
-		int count = resourceDao.getCountByPermission(permission);
-		return count;
-	}
 
 
 }

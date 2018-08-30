@@ -31,4 +31,6 @@
     <script src="${ctx!}/assets/js/plugins/jqTreeGrid/jquery.treegrid.min.js"></script>
 	<script src="${ctx!}/assets/js/plugins/jqTreeGrid/jquery.treegrid.extension.js"></script>
 	<script src="${ctx!}/assets/js/plugins/jqTreeGrid/jquery.treegrid.bootstrap3.js"></script>
+    <script  src="http://api.map.baidu.com/api?v=2.0&ak=0lPULNZ5PmrFVg76kFuRjezF"></script>
+    <script  src="http://unpkg.com/inmap/dist/inmap.min.js"></script>
 

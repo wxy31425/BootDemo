@@ -73,11 +73,9 @@ public class ResourceController extends BaseController {
 		if (resourceService.getCountByName(resource.getName()) > 0) {
 			return RestResponse.failure("菜单名称已存在");
 		}
-		if (StringUtils.isNotBlank(resource.getSourceKey())) {
-			if (resourceService.getCountByPermission(resource.getSourceKey()) > 0) {
-				return RestResponse.failure("权限标识已经存在");
-			}
-		}
+		 if(resource.getPid()==null){
+			resource.setPid(0);
+		 }
             resource.setIsHide(0);
 		    resourceService.saveOrUpdate(resource);
 		    return RestResponse.success("提交成功");
@@ -96,13 +94,7 @@ public class ResourceController extends BaseController {
                 }
             }
         }
-        if (StringUtils.isNotBlank(resource.getSourceKey())) {
-            if(!oldresource.getSourceKey().equals(resource.getSourceKey())) {
-                if (resourceService.getCountByPermission(resource.getSourceKey()) > 0) {
-                    return RestResponse.failure("权限标识已经存在");
-                }
-            }
-        }
+
         if(resource.getSort() == null){
             return RestResponse.failure("排序值不能为空");
         }

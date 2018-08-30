@@ -37,8 +37,6 @@ public interface IResourceDao extends IBaseDao<Resource, Integer> {
     @Query(value = "select count(*) from tb_resource where name=:name",nativeQuery = true)
     int getCountByName(@Param("name") String name);
 
-    @Query(value = "select count(*) from tb_resource where source_key=:sourceKey",nativeQuery = true)
-    int getCountByPermission(@Param("sourceKey") String sourceKey);
 
 
 }
